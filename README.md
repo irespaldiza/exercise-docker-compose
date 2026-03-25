@@ -107,3 +107,13 @@ Use this checklist to verify your solution:
 - Add persistent volumes for both databases and both WordPress instances
 - Make Nginx route by hostname instead of path
 - Add a custom home page in Nginx linking to both sites
+
+## Help
+
+```
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_HOME', 'http://localhost/site2');
+        define('WP_SITEURL', 'http://localhost/site2');
+        if (isset($$_SERVER['HTTP_X_FORWARDED_PROTO']) && $$_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+          $$_SERVER['HTTPS'] = 'on';
+```
