@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WordPress Multi Site Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #f5f7fb;
+      color: #1f2937;
+    }
+    .container {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      text-align: center;
+      width: min(90%, 700px);
+    }
+    h1 {
+      margin-top: 0;
+    }
+    p {
+      line-height: 1.5;
+      color: #4b5563;
+    }
+    .links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    a {
+      text-decoration: none;
+      padding: 0.9rem 1.4rem;
+      border-radius: 10px;
+      background: #2563eb;
+      color: white;
+      font-weight: bold;
+    }
+    a:hover {
+      background: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Selecciona un sitio</h1>
+    <p>
+      Este nginx actúa como punto de entrada y permite acceder a dos instalaciones
+      independientes de WordPress.
+    </p>
+    <div class="links">
+      <a href="/site1/">Ir a site1</a>
+      <a href="/site2/">Ir a site2</a>
+    </div>
+  </div>
+</body>
+</html>
