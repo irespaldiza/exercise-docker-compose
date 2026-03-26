@@ -10,8 +10,7 @@ services:
       - wordpress1
       - wordpress2
     networks:
-      - wp1_net
-      - wp2_net
+      - public
 
   wordpress1:
     image: wordpress:php8.2-apache
@@ -32,6 +31,7 @@ services:
       - wordpress1_data:/var/www/html
     networks:
       - wp1_net
+      - public
 
   db1:
     image: mariadb:11.4
@@ -64,6 +64,7 @@ services:
       - wordpress2_data:/var/www/html
     networks:
       - wp2_net
+      - public
 
   db2:
     image: mariadb:11.4
@@ -86,3 +87,4 @@ volumes:
 networks:
   wp1_net:
   wp2_net:
+  public:
